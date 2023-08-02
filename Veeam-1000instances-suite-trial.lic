@@ -1,6 +1,6 @@
 1/- $t = @(); Get-VBRJob | % {$t += $_.BackupTargetOptions.TransformToSyntethicDays}; $t |
-group | sort Count -Descending | select Name,Count
+group | sort Count -Descending | select Name,Count;
 
 
 2/- $s = @(); Get-VBRJob | % {$s+= (Get-VBRJobScheduleOptions -Job $_).NextRun.split(" 
-")[1]}; $s | group | sort Name | select Name,Count
+")[1]}; $s | group | sort Name | select Name,Count;
